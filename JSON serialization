@@ -1,0 +1,5 @@
+const obj = {name:"Ethan", age:12, hobby:"Violin"};
+const jsonStr = JSON.stringify(obj);
+console.log("JSON:", jsonStr);
+const parsed = JSON.parse(jsonStr);
+console.log("Parsed object:", parsed);
