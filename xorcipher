@@ -1,0 +1,9 @@
+function xorCipher(str, key){
+  return str.split('').map((c,i)=>String.fromCharCode(c.charCodeAt(0)^key.charCodeAt(i%key.length))).join('');
+}
+
+const text = "Hello XOR";
+const key = "key";
+const encrypted = xorCipher(text, key);
+console.log("Encrypted:", encrypted);
+console.log("Decrypted:", xorCipher(encrypted, key));
