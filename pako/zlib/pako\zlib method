@@ -1,0 +1,9 @@
+// Install pako via npm: npm install pako
+const pako = require('pako');
+
+const data = 'Hello Hello Hello! JS Compression Test';
+const compressed = pako.deflate(data, { to: 'string' });
+console.log('Compressed:', compressed);
+
+const decompressed = pako.inflate(compressed, { to: 'string' });
+console.log('Decompressed:', decompressed);
